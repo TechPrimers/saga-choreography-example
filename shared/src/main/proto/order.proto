@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package com.techprimers.shared;
+
+option java_multiple_files = true;
+option java_package = "com.techprimers.shared";
+
+service OrderService {
+  rpc createOrder(CreateOrderRequest) returns (OrderResponse) {
+  }
+
+  rpc getOrder(GetOrderRequest) returns (OrderResponse) {
+  }
+}
+
+message CreateOrderRequest {
+  int32 customerId = 1;
+  int32 sellerId = 2;
+  Product product = 3;
+  enum PaymentMethod {
+    WALLET = 0;
+    CREDIT_CARD = 1;
+  }
+  PaymentMethod paymentMethod = 4;
+  string deliveryLocation = 5;
+}
+
+message Product {
+  int32 productId = 1;
+  string productName = 2;
+}
+
+message OrderResponse {
+  int32 customerId = 1;
+  int32 sellerId = 2;
+  Product product = 3;
+  string paymentMethod = 4;
+  string deliveryLocation = 5;
+  string orderId = 6;
+  string orderStatus = 7;
+  string createdTime = 8;
+  string updatedTime = 9;
+}
+
+message GetOrderRequest {
+  string orderId = 1;
+  int32 customerId = 2;
+}
