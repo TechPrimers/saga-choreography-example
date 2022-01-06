@@ -5,6 +5,7 @@ Amazon DynamoDB, Amazon SQS and Amazon EKS.
 # Table of Contents
 - [Part 1 - Requirements & Architecture](https://www.youtube.com/watch?v=WbNJTwKOCuM)
 - [Part 2 - Creating order-service code sample](https://github.com/TechPrimers/saga-choreography-example/tree/part-2-order-service)
+- [Part 3 - Creating payment-service code sample](https://github.com/TechPrimers/saga-choreography-example/tree/part-3-payment-service)
 
 ## Architecture
 ![Architecture](./happy-path.png)
