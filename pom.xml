@@ -8,6 +8,7 @@
   <modules>
     <module>order-service</module>
     <module>shared</module>
+    <module>payment-service</module>
   </modules>
   <name>saga-choregraphy-example</name>
 </project>
